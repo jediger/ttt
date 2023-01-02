@@ -16,16 +16,10 @@ type TTTResponse = {
 
 class TTTController {
   static CurrentState(): TTTResponse {
-    const checker = new TTTChecker(State.state, State.gridSize);
     return {
       state: State.state,
-      ...checker.check(),
+      ...TTTChecker.Check(),
     };
-  }
-
-  static ValidateInput(input: TTTRequest): void {
-    State.validateCoordinates(input.x, input.y);
-    State.validateTeam(input.team);
   }
 
   static MakeMove(input: TTTRequest): TTTResponse {

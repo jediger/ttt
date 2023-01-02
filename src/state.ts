@@ -26,8 +26,7 @@ class TTTState {
   }
 
   public validateCoordinates(x: number, y: number): void {
-    if (typeof x !== 'number' || typeof y !== 'number') throw new Error('Dimensions should not be strings');
-    if (x >= this.gridSize || y >= this.gridSize) throw new Error('Coordinates out of bounds');
+    if (x < 0 || y < 0 || x >= this.gridSize || y >= this.gridSize) throw new Error('Coordinates out of bounds');
   }
 
   public validateTeam(team: TTT): void {
