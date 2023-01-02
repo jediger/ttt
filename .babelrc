@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["@babel/preset-typescript"],
+  ],
+  "ignore": ["types/**/*.d.ts"],
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-object-rest-spread"
+  ]
+}
